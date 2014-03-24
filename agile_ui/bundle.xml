@@ -1,0 +1,5 @@
+<bundle  version='0.5' name='Potomac UI' activator=''>
+<requiredBundles>
+   <bundle>agile_core</bundle>
+</requiredBundles>
+</bundle>
