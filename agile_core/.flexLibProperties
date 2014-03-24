@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="false" useMultiPlatformConfig="false" version="1">
+  <includeClasses>
+    <classEntry path="agile.bundle.Argument"/>
+    <classEntry path="agile.bundle.BundleDescriptor"/>
+    <classEntry path="agile.bundle.BundleError"/>
+    <classEntry path="agile.bundle.BundleEvent"/>
+    <classEntry path="agile.bundle.BundleInstallDescriptor"/>
+    <classEntry path="agile.bundle.BundleService"/>
+    <classEntry path="agile.bundle.Constructor"/>
+    <classEntry path="agile.bundle.Extension"/>
+    <classEntry path="agile.bundle.ExtensionEvent"/>
+    <classEntry path="agile.bundle.ExtensionPoint"/>
+    <classEntry path="agile.bundle.IBundleService"/>
+    <classEntry path="agile.bundle.Method"/>
+    <classEntry path="agile.bundle.Variable"/>
+    <classEntry path="agile.core.IAgilePreloader"/>
+    <classEntry path="agile.core.ISerializer"/>
+    <classEntry path="agile.core.LaunchRunner"/>
+    <classEntry path="agile.core.Launcher"/>
+    <classEntry path="agile.core.LauncherManifest"/>
+    <classEntry path="agile.core.AgileEventDispatcher"/>
+    <classEntry path="agile.core.SerializationService"/>
+    <classEntry path="agile.core.StartupEvent"/>
+    <classEntry path="agile.core.StorageService"/>
+    <classEntry path="agile.core.TemplateRunner"/>
+    <classEntry path="agile.inject.Binder"/>
+    <classEntry path="agile.inject.CreationWorker"/>
+    <classEntry path="agile.inject.GetInstanceWorker"/>
+    <classEntry path="agile.inject.ILinker"/>
+    <classEntry path="agile.inject.INamer"/>
+    <classEntry path="agile.inject.IProvider"/>
+    <classEntry path="agile.inject.IScoper"/>
+    <classEntry path="agile.inject.InitializedEvent"/>
+    <classEntry path="agile.inject.InjectIntoWorker"/>
+    <classEntry path="agile.inject.Injectable"/>
+    <classEntry path="agile.inject.InjectionEvent"/>
+    <classEntry path="agile.inject.InjectionPointWorker"/>
+    <classEntry path="agile.inject.InjectionRequest"/>
+    <classEntry path="agile.inject.Injector"/>
+    <classEntry path="agile.restricted.HandlesFilter"/>
+    <classEntry path="agile.restricted.InjectWithinFilter"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
