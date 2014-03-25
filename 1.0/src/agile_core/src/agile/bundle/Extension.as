@@ -114,7 +114,7 @@ package agile.bundle
 					{
 						if (extensionAssets == null)
 						{
-							extensionAssets = new (Class(getDefinitionByName("AgileAssets" + _bundleID)))();
+							extensionAssets = new (Class(getDefinitionByName("AgileAssets_" + _bundleID)))();
 						}
 						
 						//get asset from ExtensionAssets
