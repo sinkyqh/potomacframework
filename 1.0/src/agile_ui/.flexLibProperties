@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="false" useMultiPlatformConfig="false" version="1">
+  <includeClasses>
+    <classEntry path="agile.ui.Action"/>
+    <classEntry path="agile.ui.Folder"/>
+    <classEntry path="agile.ui.FolderFactory"/>
+    <classEntry path="agile.ui.FolderOptions"/>
+    <classEntry path="agile.ui.Page"/>
+    <classEntry path="agile.ui.PageDescriptor"/>
+    <classEntry path="agile.ui.PageFactory"/>
+    <classEntry path="agile.ui.PageInput"/>
+    <classEntry path="agile.ui.PageOptions"/>
+    <classEntry path="agile.ui.PartEvent"/>
+    <classEntry path="agile.ui.PartExtensionManager"/>
+    <classEntry path="agile.ui.PartInput"/>
+    <classEntry path="agile.ui.PartOptions"/>
+    <classEntry path="agile.ui.PartReference"/>
+    <classEntry path="agile.ui.AgileEvent"/>
+    <classEntry path="agile.ui.AgileUI"/>
+    <classEntry path="agile.ui.SelectionEvent"/>
+    <classEntry path="agile.ui.SelectionService"/>
+    <classEntry path="agile.ui.TemplateEvent"/>
+    <classEntry path="agile.ui.defaultUI.AccordionFolder"/>
+    <classEntry path="agile.ui.defaultUI.CloseableTabFolder"/>
+    <classEntry path="agile.ui.defaultUI.DefaultBaseFolder"/>
+    <classEntry path="agile.ui.defaultUI.DefaultPage"/>
+    <classEntry path="agile.ui.defaultUI.NakedFolder"/>
+    <classEntry path="agile.ui.defaultUI.TabFolder"/>
+    <classEntry path="agile.ui.defaultUI.TitleWindowFolder"/>
+    <classEntry path="agile.ui.restricted.BusyCanvas"/>
+    <classEntry path="agile.ui.restricted.BusyImages"/>
+    <classEntry path="agile.ui.restricted.BusyOverlay"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

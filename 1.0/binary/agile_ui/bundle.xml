@@ -1,0 +1,71 @@
+<bundle id='agile_ui' version='0.5' name='Potomac UI' activator=''>
+<requiredBundles>
+   <bundle>agile_core</bundle>
+</requiredBundles>
+<extensionPoints>
+   <extensionPoint id='Action' declaredBy='agile.ui.Action' icon='asset:png,gif,jpg' declaredOn='classes' label='*string' type='agile.ui.Action' codeStart='569' codeEnd='688' bundle='agile_ui'/>
+   <extensionPoint id='Template' declaredBy='agile.ui.AgileUI' idRequired='true' declaredOn='classes' preloadRequired='true' properties='string' type='mx.core.UIComponent' codeStart='834' codeEnd='980' bundle='agile_ui'/>
+   <extensionPoint id='Folder' declaredBy='agile.ui.Folder' relativeTo='*string' open='boolean' percent='*integer' idRequired='true' page='*string' location='*choice:top,bottom,left,right' folderType='string' codeStart='627' codeEnd='813' bundle='agile_ui'/>
+   <extensionPoint id='FolderType' declaredBy='agile.ui.FolderFactory' idRequired='true' preloadRequired='true' type='agile.ui.Folder' codeStart='756' codeEnd='857' bundle='agile_ui'/>
+   <extensionPoint id='Page' declaredBy='agile.ui.Page' pageType='string' open='boolean' icon='asset:png,gif,jpg' title='*string' idRequired='true' order='integer' declaredOn='classes' codeStart='637' codeEnd='801' bundle='agile_ui'/>
+   <extensionPoint id='PageType' declaredBy='agile.ui.PageFactory' idRequired='true' preloadRequired='true' type='agile.ui.Page' codeStart='754' codeEnd='851' bundle='agile_ui'/>
+   <extensionPoint id='Part' declaredBy='agile.ui.PartExtensionManager' icon='asset:png,jpg,gif' declaredOn='classes' type='mx.core.UIComponent' codeStart='672' folder='string' title='*string' idRequired='true' order='integer' page='string' codeEnd='861' bundle='agile_ui'/>
+   <extensionPoint id='PartInstance' declaredBy='agile.ui.PartExtensionManager' folder='*string' order='integer' declaredOn='classes' page='*string' partID='*string' codeStart='1517' codeEnd='1644' bundle='agile_ui'/>
+</extensionPoints>
+<extensions>
+   <extension point='ExtensionPointDetails' class='agile.ui.Action' id='Action' description='Declares a global Agile action' codeStart='690' codeEnd='773' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Action' id='Action' order='1' description='Action&apos;s text label' attribute='label' codeStart='775' codeEnd='877' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Action' id='Action' order='2' description='Action&apos;s image decorator' attribute='icon' codeStart='879' codeEnd='985' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.AgileUI' id='Template' description='Declares a new top-level Agile UI template' codeStart='982' codeEnd='1079' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.AgileUI' id='Template' order='1' description='A comma-separated string of custom template properties (ex &apos;logo:image,title:string&apos;).  Valid datatypes include image, string, and boolean' attribute='properties' codeStart='1081' codeEnd='1309' bundle='agile_ui'/>
+   <extension point='Injectable' class='agile.ui.AgileUI' singleton='true' codeStart='1313' codeEnd='1344' bundle='agile_ui'/>
+   <extension point='Inject' class='agile.ui.AgileUI' functionSignature='(bundleSrv:agile.bundle.IBundleService,pageFactory:agile.ui.PageFactory):agile.ui.AgileUI' codeStart='1833' codeEnd='1842' function='AgileUI' bundle='agile_ui'/>
+   <extension point='FolderType' class='agile.ui.defaultUI.AccordionFolder' id='accordion' codeStart='951' codeEnd='980' bundle='agile_ui'/>
+   <extension point='Inject' class='agile.ui.defaultUI.AccordionFolder' functionSignature='(injector:agile.inject.Injector,partExtensionMgr:agile.ui.PartExtensionManager,selectionSrv:agile.ui.SelectionService,agileUI:agile.ui.AgileUI):agile.ui.defaultUI.AccordionFolder' codeStart='1219' codeEnd='1228' function='AccordionFolder' bundle='agile_ui'/>
+   <extension point='FolderType' class='agile.ui.defaultUI.CloseableTabFolder' id='closeableTabs' codeStart='1027' codeEnd='1060' bundle='agile_ui'/>
+   <extension point='Inject' class='agile.ui.defaultUI.CloseableTabFolder' functionSignature='(injector:agile.inject.Injector,partExtensionMgr:agile.ui.PartExtensionManager,selectionSrv:agile.ui.SelectionService,agileUI:agile.ui.AgileUI):agile.ui.defaultUI.CloseableTabFolder' codeStart='1316' codeEnd='1325' function='CloseableTabFolder' bundle='agile_ui'/>
+   <extension point='PageType' class='agile.ui.defaultUI.DefaultPage' id='default' codeStart='1046' codeEnd='1071' bundle='agile_ui'/>
+   <extension point='Inject' class='agile.ui.defaultUI.DefaultPage' functionSignature='(folderFactory:agile.ui.FolderFactory,agileUI:agile.ui.AgileUI,bundleService:agile.bundle.IBundleService,partExtensionMgr:agile.ui.PartExtensionManager):agile.ui.defaultUI.DefaultPage' codeStart='1521' codeEnd='1530' function='DefaultPage' bundle='agile_ui'/>
+   <extension point='FolderType' class='agile.ui.defaultUI.NakedFolder' id='naked' codeStart='882' codeEnd='907' bundle='agile_ui'/>
+   <extension point='Inject' class='agile.ui.defaultUI.NakedFolder' functionSignature='(injector:agile.inject.Injector,partExtensionMgr:agile.ui.PartExtensionManager,selectionSrv:agile.ui.SelectionService,agileUI:agile.ui.AgileUI):agile.ui.defaultUI.NakedFolder' codeStart='1132' codeEnd='1141' function='NakedFolder' bundle='agile_ui'/>
+   <extension point='FolderType' class='agile.ui.defaultUI.TabFolder' id='tabs' codeStart='926' codeEnd='950' bundle='agile_ui'/>
+   <extension point='Inject' class='agile.ui.defaultUI.TabFolder' functionSignature='(injector:agile.inject.Injector,partExtensionMgr:agile.ui.PartExtensionManager,selectionSrv:agile.ui.SelectionService,agileUI:agile.ui.AgileUI):agile.ui.defaultUI.TabFolder' codeStart='1183' codeEnd='1192' function='TabFolder' bundle='agile_ui'/>
+   <extension point='FolderType' class='agile.ui.defaultUI.TitleWindowFolder' id='titleWindow' codeStart='884' codeEnd='915' bundle='agile_ui'/>
+   <extension point='Inject' class='agile.ui.defaultUI.TitleWindowFolder' functionSignature='(injector:agile.inject.Injector,partExtensionMgr:agile.ui.PartExtensionManager,selectionSrv:agile.ui.SelectionService,agileUI:agile.ui.AgileUI):agile.ui.defaultUI.TitleWindowFolder' codeStart='1162' codeEnd='1171' function='TitleWindowFolder' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Folder' id='Folder' description='Declares a new Agile folder in the specified page' codeStart='815' codeEnd='917' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Folder' id='Folder' order='1' description='Page in which folder should be created' attribute='page' codeStart='919' codeEnd='1039' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Folder' id='Folder' order='2' description='The existing folder this new folder will be positioned relative to' attribute='relativeTo' codeStart='1041' codeEnd='1195' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Folder' id='Folder' order='3' description='The relative positioning (top,bottom,left,right)' attribute='location' codeStart='1197' codeEnd='1331' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Folder' id='Folder' order='4' description='The relative percent of the relativeTo folder to occupy' attribute='percent' codeStart='1333' codeEnd='1473' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Folder' id='Folder' order='5' common='false' description='If false, folder will not automatically be opened/created' attribute='open' codeStart='1475' codeEnd='1630' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Folder' id='Folder' order='6' common='false' description='FolderType extension that manages the folder UI.  Default options include &apos;tabs&apos;,&apos;accordion&apos;,&apos;closeableTabs&apos;,&apos;titleWindow&apos;,&apos;naked&apos;' attribute='folderType' codeStart='1632' codeEnd='1866' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.FolderFactory' id='FolderType' description='Declares a new Folder UI presentation' codeStart='859' codeEnd='953' bundle='agile_ui'/>
+   <extension point='Injectable' class='agile.ui.FolderFactory' singleton='true' codeStart='957' codeEnd='988' bundle='agile_ui'/>
+   <extension point='Inject' class='agile.ui.FolderFactory' functionSignature='(injector:agile.inject.Injector,bundleService:agile.bundle.IBundleService):agile.ui.FolderFactory' codeStart='1322' codeEnd='1331' function='FolderFactory' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Page' id='Page' description='Declares a new Agile page' codeStart='803' codeEnd='879' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Page' id='Page' order='1' description='The page&apos;s title' attribute='title' codeStart='881' codeEnd='978' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Page' id='Page' order='2' description='The page&apos;s image' attribute='icon' codeStart='980' codeEnd='1076' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Page' id='Page' order='3' description='An integer that determines the page&apos;s order' attribute='order' codeStart='1078' codeEnd='1202' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Page' id='Page' order='4' common='false' description='If false, the page will not be automatically opened/created' attribute='open' codeStart='1204' codeEnd='1359' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Page' id='Page' order='5' common='false' description='PageType extension that managed the page&apos;s UI presentation' attribute='pageType' codeStart='1361' codeEnd='1519' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Page' id='Page' order='6' common='false' description='Location for page show' attribute='location' codeStart='1521' codeEnd='1643' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.Page' id='Page' order='7' common='false' description='Description information' attribute='description' codeStart='1645' codeEnd='1771' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.PageFactory' id='PageType' description='Declares a new page UI presentation' codeStart='853' codeEnd='943' bundle='agile_ui'/>
+   <extension point='Injectable' class='agile.ui.PageFactory' singleton='true' codeStart='947' codeEnd='978' bundle='agile_ui'/>
+   <extension point='Inject' class='agile.ui.PageFactory' functionSignature='(injector:agile.inject.Injector,bundleService:agile.bundle.IBundleService):agile.ui.PageFactory' codeStart='1252' codeEnd='1261' function='PageFactory' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.PartExtensionManager' id='Part' description='Declares a new Agile part' codeStart='863' codeEnd='939' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.PartExtensionManager' id='Part' order='1' description='The part&apos;s title' attribute='title' codeStart='941' codeEnd='1038' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.PartExtensionManager' id='Part' order='2' description='The part&apos;s image' attribute='icon' codeStart='1040' codeEnd='1136' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.PartExtensionManager' id='Part' order='3' description='The page to place the part on' attribute='page' codeStart='1138' codeEnd='1247' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.PartExtensionManager' id='Part' order='4' description='The folder to place the part in' attribute='folder' codeStart='1249' codeEnd='1362' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.PartExtensionManager' id='Part' order='5' description='The relative order of this part among all parts in the parent folder' attribute='order' codeStart='1364' codeEnd='1513' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.PartExtensionManager' id='PartInstance' description='Declares a new instance of a Potomac part' codeStart='1646' codeEnd='1746' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.PartExtensionManager' id='PartInstance' order='1' description='The id of the part to create' attribute='partID' codeStart='1748' codeEnd='1866' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.PartExtensionManager' id='PartInstance' order='2' description='The page to place the part on' attribute='page' codeStart='1868' codeEnd='1985' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.PartExtensionManager' id='PartInstance' order='3' description='The folder to place the part in' attribute='folder' codeStart='1987' codeEnd='2108' bundle='agile_ui'/>
+   <extension point='ExtensionPointDetails' class='agile.ui.PartExtensionManager' id='PartInstance' order='4' description='The relative order of this part among other parts in the parent folder' attribute='order' codeStart='2110' codeEnd='2269' bundle='agile_ui'/>
+   <extension point='Injectable' class='agile.ui.PartExtensionManager' singleton='true' codeStart='2273' codeEnd='2304' bundle='agile_ui'/>
+   <extension point='Inject' class='agile.ui.PartExtensionManager' functionSignature='(bundleService:agile.bundle.IBundleService,injector:agile.inject.Injector):agile.ui.PartExtensionManager' codeStart='2526' codeEnd='2535' function='PartExtensionManager' bundle='agile_ui'/>
+   <extension point='Injectable' class='agile.ui.SelectionService' singleton='true' codeStart='641' codeEnd='672' bundle='agile_ui'/>
+</extensions>
+</bundle>
