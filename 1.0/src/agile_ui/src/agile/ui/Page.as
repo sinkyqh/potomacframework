@@ -14,15 +14,15 @@ package agile.ui
 
 	import agile.bundle.IBundleService;
 
-	[ExtensionPoint(id="Page", declaredOn="classes", title="*string", idRequired="true", icon="asset:png,gif,jpg", pageType="string", order="integer", open="boolean")]
+	[ExtensionPoint(id="Page", declaredOn="classes", title="*string", idRequired="true", icon="asset:png,gif,jpg", pageType="string", order="integer", open="boolean",location="*choice:top,bottom,left,right,leftsub,rightsub,main")]
 	[ExtensionPointDetails(id="Page", description="Declares a new Agile page")]
 	[ExtensionPointDetails(id="Page", attribute="title", description="The page's title", order="1")]
 	[ExtensionPointDetails(id="Page", attribute="icon", description="The page's image", order="2")]
 	[ExtensionPointDetails(id="Page", attribute="order", description="An integer that determines the page's order", order="3")]
 	[ExtensionPointDetails(id="Page", attribute="open", description="If false, the page will not be automatically opened/created", order="4", common="false")]
 	[ExtensionPointDetails(id="Page", attribute="pageType", description="PageType extension that managed the page's UI presentation", order="5", common="false")]
-	[ExtensionPointDetails(id="Page", attribute="location", description="Location for page show", order="6", common="false")]
-	[ExtensionPointDetails(id="Page", attribute="description", description="Description information", order="7", common="false")]
+	[ExtensionPointDetails(id="Page", attribute="description", description="description information", order="6", common="false")]
+	[ExtensionPointDetails(id="Page", attribute="location", description="location for page show", order="7", common="false")]
 	/**
 	 * A page is a high-level subsection of an application.  Pages display
 	 * UI through one or more Folders.  Each page has one default Folder (with the id of "default")
